@@ -1,0 +1,15 @@
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\bin\Debug\TWFolderCleanUP.exe.config
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\bin\Debug\TWFolderCleanUP.exe
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\bin\Debug\TWFolderCleanUP.pdb
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.csprojAssemblyReference.cache
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\MainWindow.g.cs
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\App.g.cs
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP_MarkupCompile.cache
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP_MarkupCompile.lref
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\MainWindow.baml
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.g.resources
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.Properties.Resources.resources
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.csproj.GenerateResource.cache
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.csproj.CoreCompileInputs.cache
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.exe
+D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.pdb
