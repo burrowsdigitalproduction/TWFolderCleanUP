@@ -73,7 +73,8 @@ namespace TWFolderCleanUP
             {
                 "1761",
                 "1764",
-                "1822"
+                "1822",
+                "3241"
             };
 
             List<string> E100Codes = new List<string>
@@ -274,12 +275,24 @@ namespace TWFolderCleanUP
             string z = dupe.Substring(0, 102);
             DirectoryInfo dupefldr = new DirectoryInfo(z);
 
-            int dupecount = dupefldr.GetFiles("*", SearchOption.AllDirectories).Count();
+            if (dupefldr.Exists)
+            { int dupecount = dupefldr.GetFiles("*", SearchOption.AllDirectories).Count();
 
-            string dupescount = "Duplicates left over in folder = " + dupecount;
+                string dupescount = "Duplicates left over in folder = " + dupecount;
+                System.Windows.MessageBox.Show(dupescount, "Done", MessageBoxButton.OK);
+
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("All Done", "All Done", MessageBoxButton.OK);
+            }
+
+            
+
+            
 
 
-            System.Windows.MessageBox.Show(dupescount, "Done", MessageBoxButton.OK);
+            
 
         }
     }
