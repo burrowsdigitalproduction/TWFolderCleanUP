@@ -34,6 +34,11 @@ namespace TWFolderCleanUP
             OrganiseAssets();
         }
 
+        private void tbCleanRawFolder_Click(object sender, RoutedEventArgs e)
+        {
+            OrganiseRAWAssets();
+        }
+
 
         private void OrganiseAssets()
         {
@@ -66,15 +71,32 @@ namespace TWFolderCleanUP
                 "1489",
                 "1821",
                 "2632",
-                "2633"
+                "2633",
+                "3241",
+                "3729",
+                "3730",
+                "3731",
+                "3732",
+                "3733",
+                "3734",
+                "3735",
+                "3736"
             };
 
             List<string> GapCodes = new List<string>
             {
                 "1761",
+                "1752",
                 "1764",
                 "1822",
-                "3241"
+                "3584",
+                "3585",
+                "3586",
+                "3587",
+                "3588",
+                "3589",
+                "3590",
+                "3591"
             };
 
             List<string> E100Codes = new List<string>
@@ -125,13 +147,9 @@ namespace TWFolderCleanUP
                         if (f.FullName.Contains(type))
                         {
 
-                            foreach (string rad in Radcodes)
-                            {
-                                if (f.FullName.Contains(rad))
-                                {
-                                    foreach (string Rocca in RoccaCodes)
+                                   foreach (string Rocca in RoccaCodes)
                                     {
-                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Rocca" + "\\" + Rocca;
+                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" + "\\Rocca" + "\\" + Rocca;
 
                                         if (f.Name.Contains(Rocca))
                                         {
@@ -146,11 +164,11 @@ namespace TWFolderCleanUP
                                                 }
                                                 else if (File.Exists(movingto + "\\" + f.Name))
                                                 {
-                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Rocca" + "\\" + Rocca))
+                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" + "\\Rocca" + "\\" + Rocca))
                                                     {
-                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Rocca" + "\\" + Rocca);
+                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" + "\\Rocca" + "\\" + Rocca);
                                                     }
-                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Rocca" + "\\" + Rocca + "\\" + f.Name);
+                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" + "\\Rocca" + "\\" + Rocca + "\\" + f.Name);
                                                 }
                                             }
                                             else if (!Directory.Exists(movingto))
@@ -165,7 +183,7 @@ namespace TWFolderCleanUP
 
                                     foreach (string Gap in GapCodes)
                                     {
-                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Gap" + "\\" + Gap;
+                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" +  "\\Gap" + "\\" + Gap;
 
                                         if (f.Name.Contains(Gap))
                                         {
@@ -179,12 +197,12 @@ namespace TWFolderCleanUP
                                                 }
                                                 else if (File.Exists(movingto + "\\" + f.Name))
                                                 {
-                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Gap" + "\\" + Gap))
+                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\Gap" + "\\" + Gap))
                                                     {
-                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Gap" + "\\" + Gap);
+                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\Gap" + "\\" + Gap);
                                                     }
 
-                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\Gap" + "\\" + Gap + "\\" + f.Name);
+                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\Gap" + "\\" + Gap + "\\" + f.Name);
                                                 }
                                             }
                                         else if (!Directory.Exists(movingto))
@@ -199,7 +217,7 @@ namespace TWFolderCleanUP
 
                                     foreach (string E100 in E100Codes)
                                     {
-                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E100" + "\\" + E100;
+                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" +  "\\E100" + "\\" + E100;
 
                                         if (f.Name.Contains(E100))
                                         {
@@ -213,11 +231,11 @@ namespace TWFolderCleanUP
                                                 }
                                                 else if (File.Exists(movingto + "\\" + f.Name))
                                                 {
-                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E100" + "\\" + E100))
+                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\E100" + "\\" + E100))
                                                     {
-                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E100" + "\\" + E100);
+                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\E100" + "\\" + E100);
                                                     }
-                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E100" + "\\" + E100 + "\\" + f.Name);
+                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\E100" + "\\" + E100 + "\\" + f.Name);
                                                 }
                                             }
                                             else if (!Directory.Exists(movingto))
@@ -232,7 +250,7 @@ namespace TWFolderCleanUP
 
                                     foreach (string E500 in E500Codes)
                                     {
-                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E500" + "\\" + E500;
+                                        string movingto = moveto + "\\" + type.TrimEnd('.') + "\\" +  "\\E500" + "\\" + E500;
 
                                         if (f.Name.Contains(E500))
                                         {
@@ -246,11 +264,11 @@ namespace TWFolderCleanUP
                                                 }
                                                 else if (File.Exists(movingto + "\\" + f.Name))
                                                 {
-                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E500" + "\\" + E500))
+                                                    if (!Directory.Exists(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\E500" + "\\" + E500))
                                                     {
-                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E500" + "\\" + E500);
+                                                        Directory.CreateDirectory(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\E500" + "\\" + E500);
                                                     }
-                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" + rad + "\\E500" + "\\" + E500 + "\\" + f.Name);
+                                                    f.MoveTo(dupe + "\\" + type.TrimEnd('.') + "\\" +  "\\E500" + "\\" + E500 + "\\" + f.Name);
                                                 }
                                             }
                                             else if (!Directory.Exists(movingto))
@@ -264,9 +282,9 @@ namespace TWFolderCleanUP
 
                                     }
 
-                                }
+                                
                             }
-                        }
+                        
                     }
 
                 }
@@ -295,6 +313,194 @@ namespace TWFolderCleanUP
             
 
         }
+
+        private void OrganiseRAWAssets()
+        {
+            root = tbRawRoot.Text;
+
+            DirectoryInfo rootdir = new DirectoryInfo(root);
+            string moveto = @"\\bcluster\burrows\digital\autorender\taylorwimpey\Production\Bathroom\Assets\TilesTemp";
+
+
+            List<string> TileAreas = new List<string>()
+            {
+                "sbk_ws",
+                "sbk",
+                "half_ws",
+                "_half_p",
+                "full_p"
+
+            };
+
+            List<string> Packages = new List<string>()
+            {
+                "e100_pedestal",
+                "e500_pedestal",
+                "roca_valorped",
+                "thegap_fullped"
+            };
+
+
+            List<DirectoryInfo> folders = new List<DirectoryInfo>();
+
+            folders.Add(rootdir);
+
+            foreach (string fldinfo in Directory.GetDirectories(root, "*", SearchOption.AllDirectories))
+            {
+                DirectoryInfo tmpfldr = new DirectoryInfo(fldinfo);
+                folders.Add(tmpfldr);
+            }
+
+            if (!Directory.Exists(moveto))
+            {
+                Directory.CreateDirectory(moveto);
+                Directory.CreateDirectory(moveto + "//" + "sbk");
+                Directory.CreateDirectory(moveto + "//" + "sbk_ws");
+                Directory.CreateDirectory(moveto + "//" + "half");
+                Directory.CreateDirectory(moveto + "//" + "half_ws");
+                Directory.CreateDirectory(moveto + "//" + "full");
+            }
+            else
+            {
+                moveto = moveto + "2";
+                Directory.CreateDirectory(moveto);
+                Directory.CreateDirectory(moveto + "//" + "sbk");
+                Directory.CreateDirectory(moveto + "//" + "sbk_ws");
+                Directory.CreateDirectory(moveto + "//" + "half");
+                Directory.CreateDirectory(moveto + "//" + "half_ws");
+                Directory.CreateDirectory(moveto + "//" + "full");
+            }
+
+            
+
+            foreach (DirectoryInfo fldr in folders)
+            {
+
+                FileInfo[] filelist = fldr.GetFiles();
+
+
+                
+                    foreach (string t in TileAreas)
+                    {
+                        
+                        foreach (string p in Packages) 
+                        {
+
+                        foreach (FileInfo f in filelist)
+                        {
+
+                            string areafix = null;
+
+                            if (t == "_half_p")
+                            {
+                                areafix = "half";
+
+                            }
+                            if (t == "full_p")
+                            {
+                                areafix = "full";
+                            }
+                            if (t == "sbk")
+                            {
+                                areafix = "sbk";
+                            }
+                            if (t == "sbk_ws")
+                            {
+                                areafix = "sbk_ws";
+                            }
+
+
+                            if (f.Name.Contains(t) && f.Name.Contains(p))
+                            {
+                                string movingto;
+
+
+                                if (t == "sbk" && f.Name.Contains("sbk_ws"))
+                                {
+                                    break;
+                                }
+                                if(t == "full_p" && f.Name.Contains("sbk"))
+                                {
+                                    break;
+                                }
+
+                                if (areafix == null)
+                                {
+                                     movingto = moveto + "\\" + t + "\\" + p;
+                                    if (!Directory.Exists(movingto))
+                                    {
+                                        Directory.CreateDirectory(movingto);
+                                    }
+
+                                }
+                                else
+                                {
+                                    movingto = moveto + "\\" + areafix + "\\" + p;
+                                    if (!Directory.Exists(movingto))
+                                    {
+                                        Directory.CreateDirectory(movingto);
+                                    }
+ 
+                                }
+
+                                string fpath = movingto + "\\" + f.Name;
+
+                                FileInfo destFile = new FileInfo(fpath);
+
+
+                                if (File.Exists(movingto + "\\" + f.Name))
+                                {
+                                    if (f.LastWriteTime > destFile.LastWriteTime)
+                                    {
+                                        destFile.Delete();
+                                        f.MoveTo(movingto + "\\" + f.Name);
+                                    }
+
+                                }
+                                else if (!File.Exists(movingto + "\\" + f.Name))
+                                {
+                                    try
+                                    {
+                                        if (f.LastWriteTime > destFile.LastWriteTime)
+                                        {
+                                            destFile.Delete();
+                                            f.MoveTo(movingto + "\\" + f.Name);
+                                        }
+                                    }
+                                    catch(Exception e)
+                                    {
+                                        if (f.LastWriteTime > destFile.LastWriteTime)
+                                        {
+                                            destFile.Delete();
+                                            f.MoveTo(moveto + "\\" + f.Name);
+                                        }
+                                    }
+                                    
+                                }
+                                else
+                                {
+                                    f.MoveTo(moveto + "\\" + f.Name);
+                                }
+
+                                
+
+                            }
+
+
+
+
+
+                        }
+                    }
+                }
+
+            }
+
+            System.Windows.MessageBox.Show("Done", "Done", MessageBoxButton.OK);
+
+        }
+
+        
     }
 }
 

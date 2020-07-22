@@ -10,6 +10,5 @@ D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\MainWindow.baml
 D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.g.resources
 D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.Properties.Resources.resources
 D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.csproj.GenerateResource.cache
-D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.csproj.CoreCompileInputs.cache
 D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.exe
 D:\GitHub\TWFolderCleanUP\TWFolderCleanUP\obj\Debug\TWFolderCleanUP.pdb

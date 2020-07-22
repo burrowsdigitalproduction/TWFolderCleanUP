@@ -18,8 +18,17 @@
                     <Button x:Name="btnBathTileRun" Content="Run" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="410,21,0,0" VerticalAlignment="Top" Width="119" Click="BtnBathTileRun_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="RAW_File_CleanUp">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="22*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="87*"/>
+                        <ColumnDefinition Width="604*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="tbRawRoot" HorizontalAlignment="Left" Height="31" Margin="3,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="458" Grid.Column="1" Grid.ColumnSpan="3" Text="Z:\digital\autorender\taylorwimpey\Production\Bathroom\Assets\RAW\Tiles"/>
+                    <Button x:Name="tbCleanRawFolder" Content="Run" Grid.Column="3" HorizontalAlignment="Left" Height="43" Margin="439,232,0,0" VerticalAlignment="Top" Width="123" Click="tbCleanRawFolder_Click"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
